@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.container {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1000px;
+}
+
+header {
+    background-image: url("../img/Pizza.webp");
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: calc(100vh - 102px);
+}
+
+.content {
+    font-size: 2rem;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.content h1 {
+    color: #ffffff;
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+nav {
+    height: 2.5rem;
+    width: 100%;
+}
+
+nav .logo h1{
+    font-size: 2.5rem;
+}
+
+nav ul {
+   text-align: center;
+    margin-right: 1.25rem;
+    background-color:rgba(5, 5, 5, 0.548);
+    width: 100%;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    
+}
+
+nav ul li a{
+    color: white;    
+    padding: 0.4375rem 0.8125rem;
+    border-radius: 0.1875rem;
+    text-transform: uppercase;
+  }
+
+.selected {
+    font-weight: bold;
+}
+
+.highlight {    
+    color: white;
+    border: 0.3rem solid #00c2ff;
+    padding: 1rem;
+    text-decoration: none;
+}
+.checkbtn{
+    font-size: 1.875rem;
+    color: white;
+    float: right;
+    line-height: 5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+}
+
+footer strong {
+    color: #00c2ff;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .content {
+        font-size: 1.4rem;
+        margin: 2rem auto 0;
+        text-align: center
+    }
+    .checkbtn{
+        display: block;
+      }
+      
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        background: #363738;
+        top: 5rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 3.125rem 0;
+        line-height: 1.875rem;
+    }
+
+    nav ul li a{
+        font-size: 1.25rem;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+      }
+
+    nav .logo h1 {
+        font-size: 1.75rem;
+        padding: 0.5rem 0;
+      }
+
+    nav li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    nav .highlight {
+        display: none;
+    }
+
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer li {
+        margin: 1rem;
+        text-align: center;
+    }
+
+
+}
